@@ -10,6 +10,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
     svg {
@@ -35,11 +36,22 @@
     .fill-center {
       fill: #000;
     }
+
+    .love-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      fill: #d81b60;
+      font-weight: bold;
+      text-anchor: middle;
+    }
   </style>
 </head>
 <body>
 
 <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Texto "Te quiero" -->
+  <text x="100" y="40" class="love-text">Te quiero</text>
 
   <!-- Tallo -->
   <path d="M100 160 Q98 220 102 280" fill="none" stroke="#4caf50" stroke-width="6" class="stroke" />
@@ -50,37 +62,31 @@
 
   <!-- Pétalos ondulados -->
   <g transform="translate(100,130)">
-    <!-- Cada pétalo tiene una curva ondulada -->
     <path d="M0,0 
              Q-10,-25 -5,-40 
              Q0,-45 5,-40 
              Q10,-25 0,0" 
              class="fill-petal stroke" transform="rotate(0)"/>
-             
     <path d="M0,0 
              Q-10,-25 -5,-40 
              Q0,-45 5,-40 
              Q10,-25 0,0" 
              class="fill-petal stroke" transform="rotate(60)"/>
-
     <path d="M0,0 
              Q-10,-25 -5,-40 
              Q0,-45 5,-40 
              Q10,-25 0,0" 
              class="fill-petal stroke" transform="rotate(120)"/>
-
     <path d="M0,0 
              Q-10,-25 -5,-40 
              Q0,-45 5,-40 
              Q10,-25 0,0" 
              class="fill-petal stroke" transform="rotate(180)"/>
-
     <path d="M0,0 
              Q-10,-25 -5,-40 
              Q0,-45 5,-40 
              Q10,-25 0,0" 
              class="fill-petal stroke" transform="rotate(240)"/>
-
     <path d="M0,0 
              Q-10,-25 -5,-40 
              Q0,-45 5,-40 
