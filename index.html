@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lirio con Pétalos Ondulados</title>
+  <style>
+    body {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    svg {
+      width: 300px;
+      height: auto;
+    }
+
+    .stroke {
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .fill-petal {
+      fill: #f29ab4;
+    }
+
+    .fill-leaf {
+      fill: #8dd17e;
+    }
+
+    .fill-center {
+      fill: #000;
+    }
+  </style>
+</head>
+<body>
+
+<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Tallo -->
+  <path d="M100 160 Q98 220 102 280" fill="none" stroke="#4caf50" stroke-width="6" class="stroke" />
+
+  <!-- Hojas -->
+  <path d="M100 200 Q60 190 60 220 Q80 215 100 200" class="fill-leaf stroke"/>
+  <path d="M100 220 Q130 210 140 240 Q115 230 100 220" class="fill-leaf stroke"/>
+
+  <!-- Pétalos ondulados -->
+  <g transform="translate(100,130)">
+    <!-- Cada pétalo tiene una curva ondulada -->
+    <path d="M0,0 
+             Q-10,-25 -5,-40 
+             Q0,-45 5,-40 
+             Q10,-25 0,0" 
+             class="fill-petal stroke" transform="rotate(0)"/>
+             
+    <path d="M0,0 
+             Q-10,-25 -5,-40 
+             Q0,-45 5,-40 
+             Q10,-25 0,0" 
+             class="fill-petal stroke" transform="rotate(60)"/>
+
+    <path d="M0,0 
+             Q-10,-25 -5,-40 
+             Q0,-45 5,-40 
+             Q10,-25 0,0" 
+             class="fill-petal stroke" transform="rotate(120)"/>
+
+    <path d="M0,0 
+             Q-10,-25 -5,-40 
+             Q0,-45 5,-40 
+             Q10,-25 0,0" 
+             class="fill-petal stroke" transform="rotate(180)"/>
+
+    <path d="M0,0 
+             Q-10,-25 -5,-40 
+             Q0,-45 5,-40 
+             Q10,-25 0,0" 
+             class="fill-petal stroke" transform="rotate(240)"/>
+
+    <path d="M0,0 
+             Q-10,-25 -5,-40 
+             Q0,-45 5,-40 
+             Q10,-25 0,0" 
+             class="fill-petal stroke" transform="rotate(300)"/>
+  </g>
+
+  <!-- Centro -->
+  <circle cx="100" cy="130" r="5" class="fill-center"/>
+
+  <!-- Estambres -->
+  <line x1="100" y1="130" x2="95" y2="110" class="stroke"/>
+  <circle cx="95" cy="110" r="2" class="fill-center"/>
+  <line x1="100" y1="130" x2="100" y2="110" class="stroke"/>
+  <circle cx="100" cy="110" r="2" class="fill-center"/>
+  <line x1="100" y1="130" x2="105" y2="110" class="stroke"/>
+  <circle cx="105" cy="110" r="2" class="fill-center"/>
+
+</svg>
+
+</body>
+</html>
